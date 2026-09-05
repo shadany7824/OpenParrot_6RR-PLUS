@@ -4,6 +4,14 @@ Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS.
 ## Disclaimer
 The code is bit messed. But it's confirmed that this will worked with 6RR PLUS Rev. 4.00.13.
 
+## Support status
+
+| Game | Revision | Status |
+|:----:|:----:|:--------:|
+| WMMT6RR+ | `4.00.13` | `Working with minor issue` |
+| WMMT6RR+ | `4.01.04` | `In progress` |
+| WMSI | `1.00.??` | `Not working dude.` |
+
 ## How to use
 Don't, yet. (But you'd be able to use it with TeknoParrotUI or something.)
 
