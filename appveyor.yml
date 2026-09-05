@@ -1,0 +1,46 @@
+version: 1.0.0.{build}
+image: Visual Studio 2017
+configuration: Release
+# Do not build on tags (GitHub only)
+skip_tags: true
+environment:
+    pwe:
+        secure: tIA3WoMvSPVbwjUMlWSdfA==
+    senc:
+        secure: FYTNTbS57pKEMR13yExGybKLsI0YUzT7RsL/+pce4uGABr01RRglP3XN3tB4r/fmHuaW6SjJA4ZnmqK6irnmxQ==
+    cenc:
+        secure: 16yzBwIyf9D/P3WTZnqqL9iZ3kP9WQ0mL1StAbp8Kls=
+platform:
+- x64
+- Win32
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'  
+before_build:
+- cmd: premake5.exe vs2017
+- ps: >-
+    (Get-Content .\OpenParrot\src\OpenParrot.rc).replace("1.0.0.0", $env:appveyor_build_version).replace("1,0,0,0", $env:appveyor_build_version.replace(".", ",")) | Set-Content .\OpenParrot\src\OpenParrot2.rc
+    
+    del .\OpenParrot\src\OpenParrot.rc
+    
+    mv .\OpenParrot\src\OpenParrot2.rc .\OpenParrot\src\OpenParrot.rc
+    
+build:
+  project: OpenParrot.sln
+  verbosity: minimal
+artifacts:
+- path: build\bin\release\output\
+  name: OpenParrot$(platform)
+deploy:
+- provider: GitHub
+  release: OpenParrot$(platform)_$(APPVEYOR_BUILD_VERSION)
+  tag: OpenParrot$(platform)
+  description: $(APPVEYOR_REPO_COMMIT_MESSAGE)
+  auth_token:
+    secure: a2B+6mDTHuBa0fw8nm739eGJIZBcZp0IenhKvvXvreLR6ZUoHg9pflMP8ahNUK6o
+  repository: teknogods/OpenParrot
+  artifact: build\bin\release\OpenParrot$(platform).zip
+  force_update: true
