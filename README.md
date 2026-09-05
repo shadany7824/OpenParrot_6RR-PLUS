@@ -12,6 +12,10 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
 | WMMT6RR+ | `4.01.04` | `In progress` |
 | WMSI | `1.00.??` | `Not working dude.` |
 
+## Bug
+ - The revision is wrongly displayed when you try boot the game. It will be fix soon.
+ - The game is stuck on update check when boot. For temporary fix, just reacquire the network status on Test Menu.
+
 ## How to use
 Don't, yet. (But you'd be able to use it with TeknoParrotUI or something.)
 
