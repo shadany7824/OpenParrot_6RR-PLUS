@@ -4,17 +4,21 @@ Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS.
 ## Disclaimer
 The code is bit messed. But it's confirmed that this will worked with 6RR PLUS Rev. 4.00.13.
 
+## Features 
+ - Have a Arcade Cab Startup.
+
 ## Support status
 
 | Game | Revision | Status |
 |:----:|:----:|:--------:|
 | WMMT6RR+ | `4.00.13` | `Working with minor issue` |
 | WMMT6RR+ | `4.01.04` | `In progress` |
+| WMMT6RR+ | `4.02.??` | `Not yet` |
 | WMSI | `1.00.??` | `Not working dude.` |
 
 ## Bug
- - The revision is wrongly displayed when you try boot the game. It will be fix soon.
- - The game is stuck on update check when boot. For temporary fix, just reacquire the network status on Test Menu.
+ - Sometimes, the revision is wrongly displayed when you try boot the game. It will be fix soon.
+ - Sometimes, the game is stuck on update check when boot. For temporary fix, just reacquire the network status on Test Menu.
 
 ## How to use
 Don't, yet. (But you'd be able to use it with TeknoParrotUI or something.)
