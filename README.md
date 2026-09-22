@@ -1,11 +1,12 @@
 # OpenParrot-6RR-PLUS
-Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS.
+Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS. Also support other version like WMMT5, 5DX, 5DX+ etc.
 
 ## Disclaimer
 The code is bit messed. But it's confirmed that this will worked with 6RR PLUS Rev. 4.00.13.
 
 ## Features 
  - Have a Arcade Cab Startup.
+(It doesn't have any bug but I guess I need to patch the AMUpdater.exe soon to avoid any upcoming issue.)
 ![Hmmm.](./media/AMUpdater-Startup.png)
 
 ## Support status
