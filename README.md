@@ -6,6 +6,7 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
 
 ## Features 
  - Have a Arcade Cab Startup.
+
 (It doesn't have any bug but I guess I need to patch the AMUpdater.exe soon to avoid any upcoming issue.)
 ![Hmmm.](./media/AMUpdater-Startup.png)
 
