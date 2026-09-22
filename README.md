@@ -6,7 +6,7 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
 
 ## Features 
  - Have a Arcade Cab Startup.
-(./media/AMUpdater-Startup.png)
+![Hmmm.](./media/AMUpdater-Startup.png)
 
 ## Support status
 
