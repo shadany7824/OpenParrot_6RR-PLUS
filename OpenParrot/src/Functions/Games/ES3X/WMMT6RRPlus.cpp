@@ -644,7 +644,7 @@ static InitFunction Wmmt6RRPFunc([]()
 	FreeConsole();
 	AllocConsole();
 
-	SetConsoleTitle(L"W6P Console | Test");
+	SetConsoleTitle(L"W6P Console | BLQ 6RR+");
 
 	FILE* pNewStdout = nullptr;
 	FILE* pNewStderr = nullptr;
@@ -658,6 +658,32 @@ static InitFunction Wmmt6RRPFunc([]()
 	std::wcout.clear();
 	std::wcerr.clear();
 	std::wcin.clear();
+
+	// Arcade Experience Startup - launch AMUpdater.exe if enabled. No bug happen here but I really need to patch it soon. :)
+	if (ToBool(config["General"]["ArcadeExperienceStartup"])) {
+		STARTUPINFOW si = {};
+		PROCESS_INFORMATION pi = {};
+		si.cb = sizeof(si);
+
+		// Try to launch AMUpdater.exe from AMCUS folder
+		const wchar_t *updaterPath = L".\\AMCUS\\AMUpdater.exe";
+		
+		if (CreateProcessW(updaterPath, NULL, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
+			// Wait for AMUpdater to complete
+			WaitForSingleObject(pi.hProcess, INFINITE);
+			CloseHandle(pi.hProcess);
+			CloseHandle(pi.hThread);
+#ifdef _DEBUG
+			OutputDebugStringA("[Arcade] AMUpdater.exe completed\n");
+#endif
+		}
+		else {
+#ifdef _DEBUG
+			OutputDebugStringA("[Arcade] Failed to launch AMUpdater.exe - continuing without it\n");
+#endif
+		}
+	}
+
 	bool isTerminal = false;
 	if (ToBool(config["General"]["TerminalMode"])) {
 		isTerminal = true;
@@ -716,12 +742,6 @@ static InitFunction Wmmt6RRPFunc([]()
 
 	// resolves a system error
 	injector::WriteMemory<uint8_t>(hook::get_pattern("0F 94 C0 84 C0 0F 94 C0 84 C0 75 05 40 32 FF EB 03 40 B7 01 F6", 0x13), 0, true);
-	
-	// Skip weird camera init that stucks entire pc on certain brands. TESTED ONLY ON 05!!!!
-	if (ToBool(config["General"]["WhiteScreenFix"]))
-	{
-		injector::WriteMemory<DWORD>(hook::get_pattern("48 8B C4 55 57 41 54 41 55 41 56 48 8D 68 A1 48 81 EC 90 00 00 00 48 C7 45 D7 FE FF FF FF 48 89 58 08 48 89 70 18 45 33 F6 4C 89 75 DF 33 C0 48 89 45 E7", 0), 0x90C3C032, true);
-	}
 
 	// First auth error skip
 	injector::WriteMemory<BYTE>(imageBase + 0x770966, 0xEB, true);
