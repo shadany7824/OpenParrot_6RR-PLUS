@@ -24,7 +24,7 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
  - Sometimes, the game is stuck on update check when boot. For temporary fix, just reacquire the network status on Test Menu.
 
 ## Note
- - On [AmAuthGame64.cpp](./src/Functions/Games/ES3X/AmAuthGame64.cpp), change the `cacfg-auth_server_url` to your desired update server URL (example: https://wangan.network:10082) to avoid any bug.
+ - On [AmAuthGame64.cpp](./OpenParrot/src/Functions/Games/ES3X/AmAuthGame64.cpp), change the `cacfg-auth_server_url` to your desired update server URL (example: https://wangan.network:10082) to avoid any bug.
 
 ## How to use
 Don't, yet. (But you'd be able to use it with TeknoParrotUI or something.)
