@@ -12,12 +12,19 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
 
 ## Support status
 
-| Game | Revision | Status |
+| Game | Revision | Status | Regions |
 |:----:|:----:|:--------:|
-| WMMT6RR+ | `4.00.13` | `Working with minor issue` |
-| WMMT6RR+ | `4.01.04` | `In progress` |
-| WMMT6RR+ | `4.02.??` | `Not yet` |
-| WMSI | `1.00.??` | `Not working dude.` |
+| WMMT5 | `1.05.00` | `Perfect` | `JPN` |
+| WMMT5DX | `2.00.02` | `Perfect` | `JPN` |
+| WMMT5DX+ | `3.00.05` | `Perfect` | `JPN` |
+| WMMT6 | `1.05.03` | `Perfect` | `JPN` |
+| WMMT6R | `2.00.08` | `Perfect` | `JPN` |
+| WMMT6RR | `3.05.03` | `Perfect` | `JPN` |
+| WMMT6RR | `3.10.??` | `In progress` | `EXP` |
+| WMMT6RR+ | `4.00.13` | `Working with minor issue` | `JPN` |
+| WMMT6RR+ | `4.01.04` | `In progress` | `JPN` |
+| WMMT6RR+ | `4.02.??` | `Not yet` | `JPN` |
+| WMSI | `1.00.??` | `Not working dude.` | `JPN` |
 
 ## Bug
  - Sometimes, the revision is wrongly displayed when you try boot the game. It will be fix soon.
