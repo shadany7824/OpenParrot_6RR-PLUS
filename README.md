@@ -1,5 +1,5 @@
 # OpenParrot-6RR-PLUS
-Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS. Also support other version like WMMT5, 5DX, 5DX+ etc.
+Hyperspecialised fork of OpenParrot for Wangan Midnight Maximum Tune 6RR PLUS. Also support other version like WMMT5, 5DX, 5DX+ etc. Check [Support Status](https://github.com/shadany7824/OpenParrot_6RR-PLUS#support-status).
 
 ## Disclaimer
 The code is bit messed. But it's confirmed that this will worked with 6RR PLUS Rev. 4.00.13.
