@@ -354,6 +354,30 @@ static InitFunction Wmmt5Func([]()
 	{
 		isUpdate5 = true;
 	}
+		if (ToBool(config["General"]["ArcadeExperienceStartup"])) {
+		STARTUPINFOW si = {};
+		PROCESS_INFORMATION pi = {};
+		si.cb = sizeof(si);
+
+		// Try to launch AMUpdater.exe from AMCUS folder
+		const wchar_t *updaterPath = L".\\AMCUS\\AMUpdater.exe";
+		
+	    // Arcade Experience Startup - launch AMUpdater.exe if enabled. No bug happen here but I really need to patch it soon. :)
+	    if (CreateProcessW(updaterPath, NULL, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
+			// Wait for AMUpdater to complete
+			WaitForSingleObject(pi.hProcess, INFINITE);
+			CloseHandle(pi.hProcess);
+			CloseHandle(pi.hThread);
+#ifdef _DEBUG
+			OutputDebugStringA("[Arcade] AMUpdater.exe completed\n");
+#endif
+		}
+		else {
+#ifdef _DEBUG
+			OutputDebugStringA("[Arcade] Failed to launch AMUpdater.exe - continuing without it\n");
+#endif
+		}
+	}
 
 	// Records if terminal mode is enabled
 	bool isTerminal = false;
