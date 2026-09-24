@@ -13,7 +13,7 @@ The code is bit messed. But it's confirmed that this will worked with 6RR PLUS R
 ## Support status
 
 | Game | Revision | Status | Regions |
-|:----:|:----:|:--------:|
+|:----:|:----:|:--------:|:--------:|
 | WMMT5 | `1.05.00` | `Perfect` | `JPN` |
 | WMMT5DX | `2.00.02` | `Perfect` | `JPN` |
 | WMMT5DX+ | `3.00.05` | `Perfect` | `JPN` |
