@@ -1,4 +1,4 @@
-﻿#include <StdInc.h>
+#include <StdInc.h>
 #pragma optimize("", off)
 #include <iphlpapi.h>
 #include <winsock2.h>
@@ -374,13 +374,13 @@ dtmode-io_passphrase=Qx8hJ1KilweAp5Xm
 static const unsigned char AMConfigWM6[] = R"(
 [AMUpdaterConfig]
 ;; AMUpdater Configuration
-amucfg-title=WANGAN MIDNIGHT MAXIMUM TUNE 6RR PLUS
+amucfg-title=WANGAN MIDNIGHT MAXIMUM TUNE 6
 amucfg-lang=EN
 amucfg-countdown=5
 amucfg-h_resol=1360
 amucfg-v_resol=768
 amucfg-logfile=.\amupdater.log
-amucfg-game_rev=4
+amucfg-game_rev=1
 
 [AMAuthdConfig]
 amdcfg-authType=ALL.NET
@@ -394,7 +394,7 @@ amdcfg-offlineMode=DISABLE
 
 [AllnetConfig]
 allcfg-gameID=SBWJ
-allcfg-gameVer=15.00
+allcfg-gameVer=9.00
 
 [AllnetOptionRevalTime]
 allopt-reval_hour=7
@@ -419,10 +419,10 @@ syscfg-daemon_listen=tcp:0.0.0.0:12345
 syscfg-client_connect=tcp:127.0.0.1:12345
 
 [MuchaCAConfig]
-cacfg-game_cd=W6P1
-cacfg-game_ver=00.13
+cacfg-game_cd=WM61
+cacfg-game_ver=03.04
 cacfg-game_board_type=0
-cacfg-game_board_id=W6P
+cacfg-game_board_id=WM6
 cacfg-auth_server_url=https://0.0.0.0:10082/
 cacfg-auth_server_sslverify=0
 cacfg-auth_server_sslcafile=.\front.mucha-prd.nbgi-amnet.jp.cacert.pem
@@ -454,7 +454,7 @@ dtcfg-dl_lan_recv_timeout=
 
 [MuchaDtModeConfig]
 dtmode-io_dir=E:\
-dtmode-io_file=W6P10JPN
+dtmode-io_file=WM610JPN
 dtmode-io_conv=DECEXP
 dtmode-io_passphrase=Qx8hJ1KilweAp5Xm
 )";
@@ -598,7 +598,7 @@ cacfg-game_cd=W6P1
 cacfg-game_ver=00.13
 cacfg-game_board_type=0
 cacfg-game_board_id=W6P
-cacfg-auth_server_url=https://0.0.0.0:10082/
+cacfg-auth_server_url=https://at.cy6y.com:10082/
 cacfg-auth_server_sslverify=0
 cacfg-auth_server_sslcafile=.\front.mucha-prd.nbgi-amnet.jp.cacert.pem
 cacfg-auth_server_timeout=300
